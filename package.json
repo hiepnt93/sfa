@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "lint-gql": "graphql-schema-linter {src,packages}/**/*.graphqls",
-    "build": "npm run -s build:packages && npm run -s build:code && npm run -s build:copy:graphql && npm run -s build:copy:schema",
+    "build": "npm run -s build:code",
     "build:code": "tsc --build",
     "start": "pm2 start ecosystem.json $PM2_ARGS"
   },

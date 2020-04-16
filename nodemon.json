@@ -1,8 +1,8 @@
 {
   "verbose": true,
   "debug": false,
-  "exec": "yarn lint-gql && ts-node src",
+  "exec": "ts-node src",
   "watch": ["./src"],
-  "ext": "ts, js, graphqls",
+  "ext": "ts, js",
   "inspect": true
 }
