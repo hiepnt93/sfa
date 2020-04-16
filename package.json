@@ -1,0 +1,28 @@
+{
+  "name": "sf-api",
+  "version": "1.0.0",
+  "description": "sf api custom",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "lint-gql": "graphql-schema-linter {src,packages}/**/*.graphqls",
+    "build": "npm run -s build:packages && npm run -s build:code && npm run -s build:copy:graphql && npm run -s build:copy:schema",
+    "build:code": "tsc --build",
+    "start": "pm2 start ecosystem.json $PM2_ARGS"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@storefront-api/core": "1.0.0-rc.2",
+    "@storefront-api/default-catalog": "1.0.0-rc.2",
+    "@storefront-api/default-img": "1.0.0-rc.2",
+    "@storefront-api/default-vsf": "1.0.0-rc.2",
+    "@storefront-api/platform-magento2": "1.0.0-rc.2",
+    "graphql": "^15.0.0",
+    "graphql-schema-linter": "^0.2.6",
+    "graphql-tools": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
